@@ -69,18 +69,15 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Viron Navarro.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        A <strong className="text-stone-100">Full Stack Web Developer</strong>, currently working
+        at <strong className="text-stone-100">National Center for Mental Health</strong> creating a web applications from scratch using React Typescript as front end and Laravel as a backend
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time, I am spending coding new things like recognition on tensorflow. that you can see in my projects because I am eager to learn latest technologies as a web developer
       </p>
     </>
   ),
@@ -104,16 +101,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: ` A full stack web developer and a tech enthusiast. I have a passion for learning and creating. I am always looking for new things to learn. Aspiring to become greatest web developer in our country. `,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Pila, Laguna, Philippines', Icon: MapIcon},
+    {label: 'Age', text: '23', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Filipino', Icon: FlagIcon},
+    {label: 'Interests', text: 'Gaming, Coding', Icon: SparklesIcon},
+    {label: 'Study', text: 'Laguna State Polytechnic University', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Working.', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -126,15 +121,11 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'English',
+        level: 7,
+      },
+      {
+        name: 'Tagalog',
         level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
       },
     ],
   },
@@ -150,8 +141,8 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'blade',
+        level: 7,
       },
     ],
   },
@@ -163,29 +154,17 @@ export const skills: SkillGroup[] = [
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
+        name: 'Laravel',
+        level: 7,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Database',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
+        name: 'MySQL',
+        level: 8,
       },
     ],
   },
@@ -268,16 +247,17 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2019 - 2023',
+    location: 'Bachelor of Science in Information Technology',
+    title: 'Laguna State Polytechnic University',
+    content: <p>I learned in my school the fuldamentals of programming such us HTML, CSS, Javascript. also OOP or Object Oriented Programming, and different languages use in web developement
+    </p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2017 - 2019',
+    location: 'Information and Communication Technology',
+    title: 'Pila Senior High School',
+    content: <p></p>,
   },
 ];
 
