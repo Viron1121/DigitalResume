@@ -25,7 +25,7 @@ import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/me.png';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -151,11 +151,11 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'Node.js',
-        level: 8,
+        level: 6,
       },
       {
         name: 'Laravel',
-        level: 7,
+        level: 8,
       },
     ],
   },
@@ -168,6 +168,7 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
+  
 ];
 
 /**
@@ -250,7 +251,7 @@ export const education: TimelineItem[] = [
     date: '2019 - 2023',
     location: 'Bachelor of Science in Information Technology',
     title: 'Laguna State Polytechnic University',
-    content: <p>I learned in my school the fuldamentals of programming such us HTML, CSS, Javascript. also OOP or Object Oriented Programming, and different languages use in web developement
+    content: <p>I learned in my school the fuldamentals of programming such us HTML, CSS, Javascript. also Object Oriented Programming, and different languages use in web developement
     </p>,
   },
   {
@@ -263,25 +264,16 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'September 14 2023 - Present',
+    location: 'National Center for Mental Health',
+    title: 'Entry Level Web Developer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        A Full Stack Web Developer at National Center for Mental Health creating a web applications from scratch using React Typescript as front end and Laravel as a backend.
+        I also fixing bugs on full stack laravel projects in my current work.
+        
       </p>
-    ),
-  },
-  {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+    
     ),
   },
 ];
@@ -316,27 +308,27 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: '',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'viron3210@gmail.com',
+      href: 'mailto:viron3210@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Pila, Laguna, Philippines',
+      href: 'https://www.google.ca/maps/place/Pila,+Laguna/@14.2318075,121.3291844,13z/data=!3m1!4b1!4m6!3m5!1s0x3397e20560af3791:0x33dfd36ba32967fc!8m2!3d14.2346148!4d121.3655989!16zL20vMDRwY201?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@vayrouxs',
+      href: 'https://www.instagram.com/vayrouxs/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'Viron',
+      href: 'https://github.com/viron1121',
     },
   ],
 };
