@@ -25,10 +25,10 @@ const Footer: FC = memo(() => (
         <BoltIcon className="h-5 w-5 text-yellow" />
         <span>
           Provided by <span className="text-white">React</span>
-          <span className="italic text-yellow">Resume</span>
+          <span className="italic text-yellow">Typescript</span>
         </span>
       </a>
-      <span className="text-sm text-neutral-700">© Copyright {currentYear} Tim Baker</span>
+      {/* <span className="text-sm text-neutral-700">© Copyright {currentYear} Tim Baker</span> */}
     </div>
   </div>
 ));
