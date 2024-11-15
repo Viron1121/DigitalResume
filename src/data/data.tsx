@@ -84,7 +84,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: 'DigitalResume/assets/Navarro-Resume.pdf',
+      href: '/assets/Navarro-Resume.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
