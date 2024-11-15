@@ -8,6 +8,7 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
+import FacebookIcon from '../components/Icon/FacebookIcon';
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 // import LinkedInIcon from '../components/Icon/LinkedInIcon';
@@ -39,14 +40,13 @@ import {
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
-import FacebookIcon from '../components/Icon/FacebookIcon';
 
 /**
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Viron Digital Resume',
+  description: "A Full Stack Web Developer",
 };
 
 /**
