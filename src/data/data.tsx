@@ -84,7 +84,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/assets/Navarro-Resume.pdf',
+      href: 'DigitalResume/assets/Navarro-Resume.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -166,6 +166,15 @@ export const skills: SkillGroup[] = [
       {
         name: 'MySQL',
         level: 8,
+      },
+    ],
+  },
+  {
+    name: 'WordPress Development',
+    skills: [
+      {
+        name: '',
+        level: 9,
       },
     ],
   },
