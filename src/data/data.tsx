@@ -16,7 +16,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import profilepic from '../images/me.png';
-import shozada from '../images/portfolio/shozada.jpg';  
+import shozada from '../images/portfolio/shozada.jpg';
 import loginOTP from '../images/portfolio/loginOTP.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/KamayniHesus.jpg';
@@ -41,7 +41,7 @@ import {
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Viron Digital Resume',
-  description: "A Full Stack Web Developer",
+  description: 'A Full Stack Web Developer',
 };
 
 /**
@@ -69,11 +69,13 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        A <strong className="text-stone-100">Full Stack Web Developer</strong>, currently working
-        at <strong className="text-stone-100">National Center for Mental Health</strong> creating a web applications from scratch using React Typescript as front end and Laravel as a backend
+        A <strong className="text-stone-100">Full Stack Web Developer</strong>, currently working at{' '}
+        <strong className="text-stone-100">National Center for Mental Health</strong> creating a web applications from
+        scratch using React Typescript as front end and Laravel as a backend
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-      In my free time, I enjoy coding personal projects, including building recognition models with TensorFlow. I am passionate about learning the latest technologies and continuously improving my skills as a web developer.
+        In my free time, I enjoy coding personal projects, including building recognition models with TensorFlow. I am
+        passionate about learning the latest technologies and continuously improving my skills as a web developer.
       </p>
     </>
   ),
@@ -181,7 +183,8 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'React Ecommerce',
-    description: 'A React Ecommerce Web Application created using react js and ts, it has a backend of Laravel and a frontend of react js and ts.',
+    description:
+      'A React Ecommerce Web Application created using react js and ts, it has a backend of Laravel and a frontend of react js and ts.',
     url: 'https://github.com/Viron1121/EcommerceProject',
     image: shozada,
   },
@@ -220,9 +223,13 @@ export const education: TimelineItem[] = [
     date: '2019 - 2023',
     location: 'Bachelor of Science in Information Technology',
     title: 'Laguna State Polytechnic University',
-    content: <p>
-      During my studies, I gained a solid foundation in programming, including core web technologies such as HTML, CSS, and JavaScript. I also developed a strong understanding of Object-Oriented Programming (OOP) principles and explored various programming languages commonly used in web development.
-    </p>,
+    content: (
+      <p>
+        During my studies, I gained a solid foundation in programming, including core web technologies such as HTML,
+        CSS, and JavaScript. I also developed a strong understanding of Object-Oriented Programming (OOP) principles and
+        explored various programming languages commonly used in web development.
+      </p>
+    ),
   },
   {
     date: '2017 - 2019',
@@ -239,10 +246,11 @@ export const experience: TimelineItem[] = [
     title: 'Entry Level Web Developer',
     content: (
       <p>
-       Currently working at the National Center for Mental Health, where I build web applications from scratch using React and TypeScript for the frontend, and Laravel for the backend. In addition to developing new features, I also troubleshoot and resolve bugs across full-stack Laravel projects to ensure smooth functionality and optimal performance.
-        
+        Currently working at the National Center for Mental Health, where I build web applications from scratch using
+        React and TypeScript for the frontend, and Laravel for the backend. In addition to developing new features, I
+        also troubleshoot and resolve bugs across full-stack Laravel projects to ensure smooth functionality and optimal
+        performance.
       </p>
-    
     ),
   },
 ];
