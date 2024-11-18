@@ -16,17 +16,12 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import profilepic from '../images/me.png';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
+import shozada from '../images/portfolio/shozada.jpg';  
+import loginOTP from '../images/portfolio/loginOTP.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import porfolioImage4 from '../images/portfolio/KamayniHesus.jpg';
+
+// import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -78,7 +73,7 @@ export const heroData: Hero = {
         at <strong className="text-stone-100">National Center for Mental Health</strong> creating a web applications from scratch using React Typescript as front end and Laravel as a backend
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time, I am spending coding new things like recognition on tensorflow. that you can see in my projects because I am eager to learn latest technologies as a web developer
+      In my free time, I enjoy coding personal projects, including building recognition models with TensorFlow. I am passionate about learning the latest technologies and continuously improving my skills as a web developer.
       </p>
     </>
   ),
@@ -185,71 +180,36 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
+    title: 'React Ecommerce',
+    description: 'A React Ecommerce Web Application created using react js and ts, it has a backend of Laravel and a frontend of react js and ts.',
+    url: 'https://github.com/Viron1121/EcommerceProject',
+    image: shozada,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
+    title: 'Laravel Login with email verification',
+    description: 'a simple project that has OTP verification using email address',
+    url: 'https://github.com/Viron1121/LoginWithEmailOTP/tree/master',
+    image: loginOTP,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'WordPress Ecommerce',
+    description: 'a simple ecommerce website using wordpress',
+    url: 'https://github.com/Viron1121/EcommerceWordPress',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Kamay ni Hesus Ecommerce Project',
+    description: 'Our college project using php native with sms verification',
+    url: 'https://github.com/Viron1121/KamayniHesusEcommerce',
     image: porfolioImage4,
   },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
+
+  // {
+  //   title: 'Project title 11',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://reactresume.com',
+  //   image: porfolioImage11,
+  // },
 ];
 
 /**
@@ -260,7 +220,8 @@ export const education: TimelineItem[] = [
     date: '2019 - 2023',
     location: 'Bachelor of Science in Information Technology',
     title: 'Laguna State Polytechnic University',
-    content: <p>I learned in my school the fuldamentals of programming such us HTML, CSS, Javascript. also Object Oriented Programming, and different languages use in web developement
+    content: <p>
+      During my studies, I gained a solid foundation in programming, including core web technologies such as HTML, CSS, and JavaScript. I also developed a strong understanding of Object-Oriented Programming (OOP) principles and explored various programming languages commonly used in web development.
     </p>,
   },
   {
@@ -278,8 +239,7 @@ export const experience: TimelineItem[] = [
     title: 'Entry Level Web Developer',
     content: (
       <p>
-        A Full Stack Web Developer at National Center for Mental Health creating a web applications from scratch using React Typescript as front end and Laravel as a backend.
-        I also fixing bugs on full stack laravel projects in my current work.
+       Currently working at the National Center for Mental Health, where I build web applications from scratch using React and TypeScript for the frontend, and Laravel for the backend. In addition to developing new features, I also troubleshoot and resolve bugs across full-stack Laravel projects to ensure smooth functionality and optimal performance.
         
       </p>
     
