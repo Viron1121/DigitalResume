@@ -16,10 +16,11 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import profilepic from '../images/me.png';
-import porfolioImage4 from '../images/portfolio/KamayniHesus.jpg';
+import shozada from '../images/portfolio/shozada.jpg';
 import loginOTP from '../images/portfolio/loginOTP.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import shozada from '../images/portfolio/shozada.jpg';
+import porfolioImage4 from '../images/portfolio/KamayniHesus.jpg';
+
 // import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -80,7 +81,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: 'assets/Navarro-Resume.pdf',
+      href: 'assets/Navarro - Resume.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
