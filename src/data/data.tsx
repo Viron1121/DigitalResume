@@ -261,8 +261,8 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'Open for Commissions: Bring Your Dream System to Life',
-      text: 'Open for Commissions',
+      name: 'Currently Seeking for Full Time Job',
+      text: '',
       image: 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjl5dWg0cGQ2NzZ5MTdoYzF4ZTF0cXMxanBveDI0NWV2ODQ3N29xeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AUz0mzKFXZN4FJxWdn/giphy.webp',
     },
     {
