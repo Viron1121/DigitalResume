@@ -18,7 +18,7 @@ import heroImage from '../images/header-background.webp';
 import profilepic from '../images/me.png';
 import porfolioImage4 from '../images/portfolio/KamayniHesus.jpg';
 import loginOTP from '../images/portfolio/loginOTP.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
+import porfolioImage3 from '../images/portfolio/milktea.jpg';
 import shozada from '../images/portfolio/shozada.jpg';
 // import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import testimonialImage from '../images/testimonial.webp';
