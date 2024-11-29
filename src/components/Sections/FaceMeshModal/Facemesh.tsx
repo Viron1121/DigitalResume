@@ -1,15 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Facemesh = function Facemesh() {
-  return (
-    <>
-    <div className='card'>
-        <div className='card-body text-center'>
-        <h1 className='text-3xl'>test</h1>
-        </div>
-    </div>
-    </>
-  )
-}
+const Facemesh = () => {
+  // component logic here
+  return <div>Facemesh Component</div>;
+};
 
-export default Facemesh
+// Wrap the component with React.memo
+export default React.memo(Facemesh);
