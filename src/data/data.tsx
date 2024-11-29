@@ -84,6 +84,7 @@ export const heroData: Hero = {
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
+      target: '_blank',
     },
     {
       href: `#${SectionId.Contact}`,
@@ -242,14 +243,50 @@ export const experience: TimelineItem[] = [
   {
     date: 'September 14 2023 - Present',
     location: 'National Center for Mental Health',
-    title: 'Entry Level Web Developer',
+    title: 'Full Stack Web Developer',
     content: (
+      <>
       <p>
         Currently working at the National Center for Mental Health, where I build web applications from scratch using
         React and TypeScript for the frontend, and Laravel for the backend. In addition to developing new features, I
         also troubleshoot and resolve bugs across full-stack Laravel projects to ensure smooth functionality and optimal
         performance.
       </p>
+      <br />
+      <h1 className='text-xl font-bold'>Technology Stack</h1>
+      <div className='grid grid-cols-2'>
+        <p className=''>React Typescript - for the frontend</p>
+        <p className=''>Laravel - for the backend</p>
+        <p>MySQL - for the database</p>
+        <p>Laravel FullStack</p>
+        <p>Git: GItLab, Gitlab CI/CD for DevSecOps</p>
+        <p>Figma for UI/UX Design</p>
+        <p>draw io for team collaboration and workflow
+        process</p>
+        <p>API - RestAPI and Middleware Development
+        Technology</p>
+      </div>
+      <br />
+      <hr className='color-black'/>
+      </>
+    ),
+  },
+  {
+    date: '',
+    location: 'Sammy Snake LTD Internship (Remote) Monmouthshire, United Kingdom, NP25 5JA',
+    title: 'Game Analyst Backend Developer',
+    content: (
+      <>
+      <p>
+      As a Game Analyst and Backend Developer, I am responsible for analyzing the Nova Rally game, focusing on its integration with NFTs and blockchain technologies. My role involves assessing player needs and providing insights to enhance the gameplay experience. I collaborate with the team to ensure the game mechanics are intuitive, engaging, and tailored to player preferences. Additionally, I am involved in developing and maintaining a website that tracks player race history, allowing users to view their past performances and progress within the game. This helps players stay connected to their achievements and fosters community engagement.
+      </p>
+      <br />
+      <h1 className='text-xl font-bold'>Technology Stack</h1>
+      <p className=''>Node js - for the backend</p>
+      <p>Github - for version control</p>
+      <p>React js - for the frontend</p>
+
+      </>
     ),
   },
 ];
