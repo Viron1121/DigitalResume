@@ -255,15 +255,16 @@ export const experience: TimelineItem[] = [
       <br />
       <h1 className='text-xl font-bold'>Technology Stack</h1>
       <div className='grid grid-cols-2'>
-        <p className=''>React Typescript - for the frontend</p>
-        <p className=''>Laravel - for the backend</p>
-        <p>MySQL - for the database</p>
-        <p>Laravel FullStack</p>
-        <p>Git: GItLab, Gitlab CI/CD for DevSecOps</p>
-        <p>Figma for UI/UX Design</p>
-        <p>draw io for team collaboration and workflow
-        process</p>
-        <p>API - RestAPI and Middleware Development
+        <p className=''> • React Typescript - for the frontend</p>
+        <p className=''> • Laravel - for the backend</p>
+        <p> • MySQL - for the database</p>
+        <p> • Laravel FullStack</p>
+        <p> • Git: GItLab, Gitlab CI/CD for DevSecOps</p>
+        <p> • Figma for UI/UX Design</p>
+        <p> • draw io for team collaboration and workflow
+        process
+        </p>
+        <p> • API - RestAPI and Middleware Development
         Technology</p>
       </div>
       <br />
@@ -282,9 +283,9 @@ export const experience: TimelineItem[] = [
       </p>
       <br />
       <h1 className='text-xl font-bold'>Technology Stack</h1>
-      <p className=''>Node js - for the backend</p>
-      <p>Github - for version control</p>
-      <p>React js - for the frontend</p>
+      <p className=''> • Node js - for the backend</p>
+      <p> • Github - for version control</p>
+      <p> • React js - for the frontend</p>
 
       </>
     ),
