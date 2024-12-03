@@ -93,7 +93,7 @@ export const heroData: Hero = {
           }} 
         />
       </strong>
-      , as the frontend and Laravel as the backend.
+      as the frontend and Laravel as the backend.
     </p>
     <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
       In my free time, I enjoy coding personal projects, including building recognition models with TensorFlow. I am
