@@ -87,7 +87,7 @@ export const heroData: Hero = {
           // src="/assets/react.gif" //for local
           src="assets/react.gif" //for main branch deployed
           style={{
-            filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.5))',
+            filter: 'drop-shadow(0 0 5px rgba(100, 100, 255, 0.7)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 15px rgba(100, 100, 255, 0.5))',
             margin: 0, 
             padding: 0,
           }} 
