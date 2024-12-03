@@ -20,6 +20,8 @@ import porfolioImage4 from '../images/portfolio/KamayniHesus.jpg';
 import loginOTP from '../images/portfolio/loginOTP.jpg';
 import porfolioImage3 from '../images/portfolio/milktea.jpg';
 import shozada from '../images/portfolio/shozada.jpg';
+
+
 // import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -64,20 +66,44 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Viron Navarro.`,
+  name: 
+    (
+        <> 
+        I'm <span className=''>Viron</span>  Navarro
+        </>
+    )
+  ,
   description: (
     <>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        A <strong className="text-stone-100">Full Stack Web Developer</strong>, currently working at{' '}
-        <strong className="text-stone-100">National Center for Mental Health</strong> creating a web applications from
-        scratch using React Typescript as front end and Laravel as a backend
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time, I enjoy coding personal projects, including building recognition models with TensorFlow. I am
-        passionate about learning the latest technologies and continuously improving my skills as a web developer.
-      </p>
+     <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg items-center">
+      A {''}
+      <strong style={{ color: 'white', textShadow: '0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5)' }}>
+        Full Stack Web Developer
+      </strong>, currently working at{' '}
+      <strong className="text-stone-100">National Center for Mental Health</strong> creating web applications from
+      scratch using{' '}
+      <strong className="inline-flex items-center space-x-1">
+        <span>React TypeScript</span>
+        <img
+          src="/assets/react.gif"
+          alt="React Logo"
+          className="w-10 h-8"
+          style={{
+            filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.5))',
+            margin: 0, 
+            padding: 0,
+          }} 
+        />
+      </strong>
+      , as the frontend and Laravel as the backend.
+    </p>
+    <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+      In my free time, I enjoy coding personal projects, including building recognition models with TensorFlow. I am
+      passionate about learning the latest technologies and continuously improving my skills as a web developer.
+    </p>
     </>
   ),
+  
   actions: [
     {
       href: 'assets/VironNavarro-CV.pdf',
