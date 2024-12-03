@@ -73,9 +73,8 @@ export const heroData: Hero = {
   ,
   description: (
     <>
-     <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg items-center">
-      A {''}
-      <strong style={{color: 'white', textShadow: '0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5)'}}>
+     <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg items-center"> 
+     A {' '}<strong style={{color: 'white', textShadow: '0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5)'}}>
         Full Stack Web Developer
       </strong>, currently working at{' '}
       <strong className="text-stone-100">National Center for Mental Health</strong> creating web applications from
