@@ -20,8 +20,6 @@ import porfolioImage4 from '../images/portfolio/KamayniHesus.jpg';
 import loginOTP from '../images/portfolio/loginOTP.jpg';
 import porfolioImage3 from '../images/portfolio/milktea.jpg';
 import shozada from '../images/portfolio/shozada.jpg';
-
-
 // import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -76,8 +74,8 @@ export const heroData: Hero = {
   description: (
     <>
      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg items-center">
-      A {''}
-      <strong style={{ color: 'white', textShadow: '0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5)' }}>
+      A 
+      <strong style={{color: 'white', textShadow: '0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5)'}}>
         Full Stack Web Developer
       </strong>, currently working at{' '}
       <strong className="text-stone-100">National Center for Mental Health</strong> creating web applications from
@@ -85,9 +83,9 @@ export const heroData: Hero = {
       <strong className="inline-flex items-center space-x-1">
         <span>React TypeScript</span>
         <img
-          src="/assets/react.gif"
           alt="React Logo"
           className="w-10 h-8"
+          src="/assets/react.gif"
           style={{
             filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.5))',
             margin: 0, 
