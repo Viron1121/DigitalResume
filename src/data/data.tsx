@@ -364,6 +364,11 @@ export const contact: ContactSection = {
       text: 'Viron',
       href: 'https://github.com/viron1121',
     },
+    {
+      type: ContactType.Facebook,
+      text: 'Viron Navarro',
+      href: 'https://www.facebook.com/messages/t/100012224289774',
+    },
   ],
 };
 
