@@ -1,5 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
 
+import {SectionId} from '../../data/data';
+import Section from '../Layout/Section';
+
 const Facemesh: React.FC = () => {
   const videoHeight = 480;
   const videoWidth = 640;
@@ -99,23 +102,28 @@ const Facemesh: React.FC = () => {
 
   const canvasStyle: React.CSSProperties = {
     position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
   };
 
   return (
-    <div className="App" style={{textAlign: 'center'}}>
-      <span>{initializing ? 'Initializing...' : 'Ready'}</span>
-      <div className="display-flex justify-content-center" style={videoContainerStyle}>
-        <video
-          autoPlay
-          height={videoHeight}
-          muted
-          onPlay={handleVideoOnPlay}
-          ref={videoRef}
-          width={videoWidth}
-        />
-        <canvas className="position-absolute" ref={canvasRef} style={canvasStyle} />
+    <Section className="bg-neutral-800" sectionId={SectionId.Facemesh}>
+      <div className="App " style={{textAlign: 'center'}}>
+        <span>{initializing ? 'Initializing...' : 'Ready'}</span>
+        <div className="display-flex justify-content-center" style={videoContainerStyle}>
+          <video
+            autoPlay
+            height={videoHeight}
+            muted
+            onPlay={handleVideoOnPlay}
+            ref={videoRef}
+            width={videoWidth}
+          />
+          <canvas className="position-absolute" ref={canvasRef} style={canvasStyle} />
+        </div>
       </div>
-    </div>
+    </Section>
   );
 };
 
