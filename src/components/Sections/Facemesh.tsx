@@ -121,8 +121,9 @@ const Facemesh: React.FC = () => {
 // Declare the faceapi global object
 declare global {
   interface Window {
-    faceapi: typeof import('face-api.js');
+    faceapi: unknown;
   }
 }
+
 
 export default React.memo(Facemesh);
