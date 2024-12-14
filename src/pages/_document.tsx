@@ -15,11 +15,7 @@ export default function Document() {
           - https://bugs.chromium.org/p/chromium/issues/detail?id=872770 */}
 
         <meta content="notranslate" name="google" />
-        <script
-          crossOrigin="anonymous"
-          integrity="sha384-[INSERT-INTEGRITY-HERE]"
-          src="https://cdn.jsdelivr.net/npm/face-api.js"
-        ></script>
+     
       </Head>
       <body className="bg-black">
         <Main />
