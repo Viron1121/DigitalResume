@@ -121,7 +121,7 @@ const Facemesh: React.FC = () => {
 // Declare the faceapi global object
 declare global {
   interface Window {
-    faceapi: unknown;
+    faceapi: any; 
   }
 }
 
