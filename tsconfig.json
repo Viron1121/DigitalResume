@@ -23,7 +23,11 @@
     "incremental": true
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "globals.d.ts"  
   ],
   "exclude": [
     "node_modules"
