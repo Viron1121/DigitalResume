@@ -4,79 +4,89 @@ const Facemesh: React.FC = () => {
   const videoHeight = 480;
   const videoWidth = 640;
   const [initializing, setInitializing] = useState(false);
-
-  const [faceApiLoaded, setFaceApiLoaded] = useState(false);
+  const [modelsLoaded, setModelsLoaded] = useState(false); // Track model loading
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const loadFaceApi = async () => {
-      const faceapi = await import('face-api.js');
-      setFaceApiLoaded(true);
-      const MODEL_URL = '/models';
-
-      setInitializing(true);
-      Promise.all([
-        faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
-        faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL),
-        faceapi.nets.faceRecognitionNet.loadFromUri(MODEL_URL),
-        faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL),
-      ]).then(startVideo);
+      if (!window.faceapi) {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js';
+        script.async = true;
+        script.onload = () => initializeFaceApi();
+        script.onerror = () => console.error('Failed to load face-api.js');
+        document.body.appendChild(script);
+      } else {
+        initializeFaceApi();
+      }
     };
 
-    if (typeof window !== 'undefined') {
-      loadFaceApi();
-    }
+    const initializeFaceApi = async () => {
+      const MODEL_URL = '/models';
+      setInitializing(true);
+      try {
+        await Promise.all([
+          window.faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
+          window.faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL),
+          window.faceapi.nets.faceRecognitionNet.loadFromUri(MODEL_URL),
+          window.faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL),
+        ]);
+        setModelsLoaded(true); // Set modelsLoaded after successful loading
+        startVideo();
+      } catch (error) {
+        console.error('Error loading face-api models:', error);
+      }
+    };
+
+    loadFaceApi();
   }, []);
 
   const startVideo = () => {
     if (videoRef.current) {
       navigator.mediaDevices
-        .getUserMedia({
-          video: {},
-        })
-        .then(stream => {
+        .getUserMedia({video: {}})
+        .then((stream) => {
           if (videoRef.current) {
             videoRef.current.srcObject = stream;
           }
         })
-        .catch(err => console.log(err));
+        .catch((err) => console.error('Error accessing video stream:', err));
     }
   };
 
   const handleVideoOnPlay = () => {
-    if (videoRef.current && canvasRef.current && faceApiLoaded) {
-      const faceapi = require('face-api.js');
+    if (videoRef.current && canvasRef.current && modelsLoaded) {
       const videoElement = videoRef.current;
       const canvasElement = canvasRef.current;
 
-      const canvas = faceapi.createCanvasFromMedia(videoElement);
+      const canvas = window.faceapi.createCanvasFromMedia(videoElement);
       canvasElement.innerHTML = ''; // Clear any previous canvas
       canvasElement.appendChild(canvas);
 
       const displaySize = {width: videoWidth, height: videoHeight};
-      faceapi.matchDimensions(canvasElement, displaySize);
+      window.faceapi.matchDimensions(canvasElement, displaySize);
 
       setInterval(async () => {
         if (initializing) {
           setInitializing(false);
         }
 
-        const detections = await faceapi
-          .detectAllFaces(videoElement, new faceapi.TinyFaceDetectorOptions())
+        const detections = await window.faceapi
+          .detectAllFaces(videoElement, new window.faceapi.TinyFaceDetectorOptions())
           .withFaceLandmarks()
           .withFaceExpressions();
 
-        const resizedDetections = faceapi.resizeResults(detections, displaySize);
+        const resizedDetections = window.faceapi.resizeResults(detections, displaySize);
 
         const ctx = canvasElement.getContext('2d');
         if (ctx) {
           ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
         }
 
-        faceapi.draw.drawDetections(canvasElement, resizedDetections);
-        faceapi.draw.drawFaceLandmarks(canvasElement, resizedDetections);
-        faceapi.draw.drawFaceExpressions(canvasElement, resizedDetections);
+        window.faceapi.draw.drawDetections(canvasElement, resizedDetections);
+        window.faceapi.draw.drawFaceLandmarks(canvasElement, resizedDetections);
+        window.faceapi.draw.drawFaceExpressions(canvasElement, resizedDetections);
       }, 100);
     }
   };
@@ -92,13 +102,27 @@ const Facemesh: React.FC = () => {
 
   return (
     <div className="App" style={{textAlign: 'center'}}>
-      <span>{initializing ? 'Initializing' : 'Ready'}</span>
+      <span>{initializing ? 'Initializing...' : 'Ready'}</span>
       <div className="display-flex justify-content-center" style={videoContainerStyle}>
-        <video autoPlay height={videoHeight} muted onPlay={handleVideoOnPlay} ref={videoRef} width={videoWidth} />
+        <video
+          autoPlay
+          height={videoHeight}
+          muted
+          onPlay={handleVideoOnPlay}
+          ref={videoRef}
+          width={videoWidth}
+        />
         <canvas className="position-absolute" ref={canvasRef} style={canvasStyle} />
       </div>
     </div>
   );
 };
+
+// Declare the faceapi global object
+// declare global {
+//   interface Window {
+//     faceapi: typeof import('face-api.js');
+//   }
+// }
 
 export default React.memo(Facemesh);

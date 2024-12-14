@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"..\\\\components\\\\Sections\\\\Facemesh.tsx -> face-api.js":{"id":2693,"files":[]},"index.tsx -> ../components/Sections/Header":{"id":9303,"files":["static/chunks/251.565dc56164fd9daf.js","static/chunks/303.345739f4bf4ad63b.js"]}}';
+self.__REACT_LOADABLE_MANIFEST='{"index.tsx -> ../components/Sections/Header":{"id":9303,"files":["static/chunks/251.565dc56164fd9daf.js","static/chunks/303.345739f4bf4ad63b.js"]}}';
