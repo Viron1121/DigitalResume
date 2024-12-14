@@ -8,6 +8,7 @@ import FacebookIcon from '../../Icon/FacebookIcon';
 import GithubIcon from '../../Icon/GithubIcon';
 import InstagramIcon from '../../Icon/InstagramIcon';
 import LinkedInIcon from '../../Icon/LinkedInIcon';
+import MessengerIcon from '../../Icon/MessengerIcon';
 import TwitterIcon from '../../Icon/TwitterIcon';
 import Section from '../../Layout/Section';
 import ContactForm from './ContactForm';
@@ -21,6 +22,7 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
   [ContactType.Facebook]: {Icon: FacebookIcon, srLabel: 'Facebook'},
   [ContactType.Twitter]: {Icon: TwitterIcon, srLabel: 'Twitter'},
   [ContactType.Instagram]: {Icon: InstagramIcon, srLabel: 'Instagram'},
+  [ContactType.Messenger]: {Icon: MessengerIcon, srLabel: 'Messenger'},
 };
 
 const Contact: FC = memo(() => {
@@ -28,7 +30,7 @@ const Contact: FC = memo(() => {
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Contact}>
       <div className="flex flex-col gap-y-6">
-        <div className="flex flex-col gap-6 md:flex-row md:items-center text-center">
+        <div className="flex flex-col gap-6 md:flex-row md:items-center">
           <EnvelopeIcon className="hidden h-16 w-16 text-white md:block" />
           <h2 className="text-2xl font-bold text-white">{headerText}</h2>
         </div>
