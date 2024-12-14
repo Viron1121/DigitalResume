@@ -23,7 +23,8 @@ const Facemesh: React.FC = () => {
     };
 
     const initializeFaceApi = async () => {
-      const MODEL_URL = '/models';
+      // const MODEL_URL = '/models'; //for local
+      const MODEL_URL = 'models'; //for prod
       setInitializing(true);
       try {
         await Promise.all([
