@@ -4,10 +4,8 @@ import {SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 
 const Facemesh: React.FC = () => {
-  const videoHeight = 480;
-  const videoWidth = 640;
   const [initializing, setInitializing] = useState(false);
-  const [modelsLoaded, setModelsLoaded] = useState(false); // Track model loading
+  const [modelsLoaded, setModelsLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -26,8 +24,7 @@ const Facemesh: React.FC = () => {
     };
 
     const initializeFaceApi = async () => {
-      // const MODEL_URL = '/models'; //for local
-      const MODEL_URL = 'models'; //for prod
+      const MODEL_URL = 'models';
       setInitializing(true);
       try {
         await Promise.all([
@@ -36,7 +33,7 @@ const Facemesh: React.FC = () => {
           window.faceapi.nets.faceRecognitionNet.loadFromUri(MODEL_URL),
           window.faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL),
         ]);
-        setModelsLoaded(true); // Set modelsLoaded after successful loading
+        setModelsLoaded(true);
         startVideo();
       } catch (error) {
         console.error('Error loading face-api models:', error);
@@ -65,10 +62,10 @@ const Facemesh: React.FC = () => {
       const canvasElement = canvasRef.current;
 
       const canvas = window.faceapi.createCanvasFromMedia(videoElement);
-      canvasElement.innerHTML = ''; // Clear any previous canvas
+      canvasElement.innerHTML = '';
       canvasElement.appendChild(canvas);
 
-      const displaySize = {width: videoWidth, height: videoHeight};
+      const displaySize = {width: videoElement.offsetWidth, height: videoElement.offsetHeight};
       window.faceapi.matchDimensions(canvasElement, displaySize);
 
       setInterval(async () => {
@@ -96,31 +93,38 @@ const Facemesh: React.FC = () => {
   };
 
   const videoContainerStyle: React.CSSProperties = {
-    display: 'flex',
-    justifyContent: 'center',
+    position: 'relative',
+    width: '100%',
+    maxWidth: '640px', // Limit max width for larger screens
+    margin: '0 auto',
+  };
+
+  const videoStyle: React.CSSProperties = {
+    width: '100%', // Responsive width
+    height: 'auto', // Maintain aspect ratio
   };
 
   const canvasStyle: React.CSSProperties = {
     position: 'absolute',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
   };
 
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Facemesh}>
-      <div className="App " style={{textAlign: 'center'}}>
+      <div style={{textAlign: 'center'}}>
         <span>{initializing ? 'Initializing...' : 'Ready'}</span>
-        <div className="display-flex justify-content-center" style={videoContainerStyle}>
+        <div style={videoContainerStyle}>
           <video
             autoPlay
-            height={videoHeight}
             muted
             onPlay={handleVideoOnPlay}
             ref={videoRef}
-            width={videoWidth}
+            style={videoStyle}
           />
-          <canvas className="position-absolute" ref={canvasRef} style={canvasStyle} />
+          <canvas ref={canvasRef} style={canvasStyle} />
         </div>
       </div>
     </Section>
@@ -133,6 +137,5 @@ declare global {
     faceapi: any; 
   }
 }
-
 
 export default React.memo(Facemesh);
