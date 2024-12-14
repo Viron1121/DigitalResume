@@ -20,15 +20,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "types": [
+      "node",
+      "globals",
+     
+    ] // <-- Added this line
   },
+  // "include": [
+  //   "./src/**/*",
+  //   "next-env.d.ts",
+  //   "**/*.ts",
+  //   "**/*.tsx",
+  //   "globals.d.ts"
+  // ],
   "include": [
-    "./src/**/*",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "globals.d.ts"  
-  ],
+    "src/**/*",
+    "global.d.ts"
+  ]
+  // "exclude": ["node_modules"]
+  ,
   "exclude": [
     "node_modules"
   ]

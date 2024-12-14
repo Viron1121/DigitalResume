@@ -23,6 +23,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: false,
+  // output: 'export',
   images: {
     unoptimized: true,  
     remotePatterns: [
@@ -35,7 +36,7 @@ const nextConfig = {
       },
     ],
   },
-  output: 'export',
+  
 };
 
 module.exports = nextConfig;
