@@ -27,7 +27,6 @@ const Resume: FC = memo(() => {
               <SkillGroup key={`${skillgroup.name}-${index}`} skillGroup={skillgroup} />
             ))}
           </div>
-          
         </ResumeSection>
       </div>
     </Section>

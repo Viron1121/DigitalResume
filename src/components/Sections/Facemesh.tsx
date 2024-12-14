@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 const Facemesh: React.FC = () => {
   const videoHeight = 480;
@@ -31,13 +31,16 @@ const Facemesh: React.FC = () => {
 
   const startVideo = () => {
     if (videoRef.current) {
-      navigator.mediaDevices.getUserMedia({
-        video: {},
-      }).then((stream) => {
-        if (videoRef.current) {
-          videoRef.current.srcObject = stream;
-        }
-      }).catch((err) => console.log(err));
+      navigator.mediaDevices
+        .getUserMedia({
+          video: {},
+        })
+        .then(stream => {
+          if (videoRef.current) {
+            videoRef.current.srcObject = stream;
+          }
+        })
+        .catch(err => console.log(err));
     }
   };
 
@@ -51,7 +54,7 @@ const Facemesh: React.FC = () => {
       canvasElement.innerHTML = ''; // Clear any previous canvas
       canvasElement.appendChild(canvas);
 
-      const displaySize = { width: videoWidth, height: videoHeight };
+      const displaySize = {width: videoWidth, height: videoHeight};
       faceapi.matchDimensions(canvasElement, displaySize);
 
       setInterval(async () => {
@@ -88,17 +91,10 @@ const Facemesh: React.FC = () => {
   };
 
   return (
-    <div className="App" style={{ textAlign: 'center' }}>
+    <div className="App" style={{textAlign: 'center'}}>
       <span>{initializing ? 'Initializing' : 'Ready'}</span>
       <div className="display-flex justify-content-center" style={videoContainerStyle}>
-        <video
-          autoPlay
-          height={videoHeight}
-          muted
-          onPlay={handleVideoOnPlay}
-          ref={videoRef}
-          width={videoWidth}
-        />
+        <video autoPlay height={videoHeight} muted onPlay={handleVideoOnPlay} ref={videoRef} width={videoWidth} />
         <canvas className="position-absolute" ref={canvasRef} style={canvasStyle} />
       </div>
     </div>

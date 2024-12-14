@@ -18,6 +18,8 @@
   ],
   "ignorePatterns": ["*/public", "*/node_modules/*", "*/.next/*", "*/dist/*"],
   "rules": {
+    
+    "@typescript-eslint/no-var-requires": "off",
     "react/display-name": "off",
     // The next two rules should be errors. But for now we"ll leave them as warnings since this will take a while
     "react-memo/require-usememo": "off",
@@ -67,6 +69,7 @@
     {
       "files": ["**/*.js"],
       "rules": {
+        "object-curly-spacing": "off",
         "@typescript-eslint/no-var-requires": "off"
       }
     }

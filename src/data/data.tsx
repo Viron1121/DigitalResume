@@ -64,44 +64,49 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: 
-    (
-        <> 
-        I'm <span className=''>Viron</span>  Navarro
-        </>
-    )
-  ,
-  description: (
+  name: (
     <>
-     <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg items-center"> 
-     A {' '}<strong style={{color: 'white', textShadow: '0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5)'}}>
-        Full Stack Web Developer
-      </strong>, currently working at{' '}
-      <strong className="text-stone-100">National Center for Mental Health</strong> creating web applications from
-      scratch using{' '}
-      <strong className="inline-flex items-center space-x-1">
-        <span>React TypeScript</span>
-        <img
-          alt="React Logo"
-          className="w-10 h-8"
-          // src="/assets/react.gif" //for local
-          src="assets/react.gif" //for main branch deployed
-          style={{
-            filter: 'drop-shadow(0 0 5px rgba(100, 100, 255, 0.7)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 15px rgba(100, 100, 255, 0.5))',
-            margin: 0, 
-            padding: 0,
-          }} 
-        />
-      </strong>
-      as the frontend and Laravel as the backend.
-    </p>
-    <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-      In my free time, I enjoy coding personal projects, including building recognition models with TensorFlow. I am
-      passionate about learning the latest technologies and continuously improving my skills as a web developer.
-    </p>
+      I'm <span className="">Viron</span> Navarro
     </>
   ),
-  
+  description: (
+    <>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg items-center">
+        A{' '}
+        <strong
+          style={{
+            color: 'white',
+            textShadow:
+              '0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5)',
+          }}>
+          Full Stack Web Developer
+        </strong>
+        , currently working at <strong className="text-stone-100">National Center for Mental Health</strong> creating
+        web applications from scratch using{' '}
+        <strong className="inline-flex items-center space-x-1">
+          <span>React TypeScript</span>
+          <img
+            alt="React Logo"
+            className="w-10 h-8"
+            // src="/assets/react.gif" //for local
+            src="assets/react.gif" //for main branch deployed
+            style={{
+              filter:
+                'drop-shadow(0 0 5px rgba(100, 100, 255, 0.7)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 15px rgba(100, 100, 255, 0.5))',
+              margin: 0,
+              padding: 0,
+            }}
+          />
+        </strong>
+        as the frontend and Laravel as the backend.
+      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        In my free time, I enjoy coding personal projects, including building recognition models with TensorFlow. I am
+        passionate about learning the latest technologies and continuously improving my skills as a web developer.
+      </p>
+    </>
+  ),
+
   actions: [
     {
       href: 'assets/VironNavarro-CV.pdf',
@@ -270,29 +275,26 @@ export const experience: TimelineItem[] = [
     title: 'Full Stack Web Developer',
     content: (
       <>
-      <p>
-        Currently working at the National Center for Mental Health, where I build web applications from scratch using
-        React and TypeScript for the frontend, and Laravel for the backend. In addition to developing new features, I
-        also troubleshoot and resolve bugs across full-stack Laravel projects to ensure smooth functionality and optimal
-        performance.
-      </p>
-      <br />
-      <h1 className='text-xl font-bold'>Technology Stack</h1>
-      <div className='grid grid-cols-2'>
-        <p className=''> • React Typescript - for the frontend</p>
-        <p className=''> • Laravel - for the backend</p>
-        <p> • MySQL - for the database</p>
-        <p> • Laravel FullStack</p>
-        <p> • Git: GItLab, Gitlab CI/CD for DevSecOps</p>
-        <p> • Figma for UI/UX Design</p>
-        <p> • draw io for team collaboration and workflow
-        process
+        <p>
+          Currently working at the National Center for Mental Health, where I build web applications from scratch using
+          React and TypeScript for the frontend, and Laravel for the backend. In addition to developing new features, I
+          also troubleshoot and resolve bugs across full-stack Laravel projects to ensure smooth functionality and
+          optimal performance.
         </p>
-        <p> • API - RestAPI and Middleware Development
-        Technology</p>
-      </div>
-      <br />
-      <hr className='color-black'/>
+        <br />
+        <h1 className="text-xl font-bold">Technology Stack</h1>
+        <div className="grid grid-cols-2">
+          <p className=""> • React Typescript - for the frontend</p>
+          <p className=""> • Laravel - for the backend</p>
+          <p> • MySQL - for the database</p>
+          <p> • Laravel FullStack</p>
+          <p> • Git: GItLab, Gitlab CI/CD for DevSecOps</p>
+          <p> • Figma for UI/UX Design</p>
+          <p> • draw io for team collaboration and workflow process</p>
+          <p> • API - RestAPI and Middleware Development Technology</p>
+        </div>
+        <br />
+        <hr className="color-black" />
       </>
     ),
   },
@@ -302,15 +304,20 @@ export const experience: TimelineItem[] = [
     title: 'Game Analyst Backend Developer',
     content: (
       <>
-      <p>
-      As a Game Analyst and Backend Developer, I am responsible for analyzing the Nova Rally game, focusing on its integration with NFTs and blockchain technologies. My role involves assessing player needs and providing insights to enhance the gameplay experience. I collaborate with the team to ensure the game mechanics are intuitive, engaging, and tailored to player preferences. Additionally, I am involved in developing and maintaining a website that tracks player race history, allowing users to view their past performances and progress within the game. This helps players stay connected to their achievements and fosters community engagement.
-      </p>
-      <br />
-      <h1 className='text-xl font-bold'>Technology Stack</h1>
-      <p className=''> • Node js - for the backend</p>
-      <p> • Github - for version control</p>
-      <p> • React js - for the frontend</p>
-
+        <p>
+          As a Game Analyst and Backend Developer, I am responsible for analyzing the Nova Rally game, focusing on its
+          integration with NFTs and blockchain technologies. My role involves assessing player needs and providing
+          insights to enhance the gameplay experience. I collaborate with the team to ensure the game mechanics are
+          intuitive, engaging, and tailored to player preferences. Additionally, I am involved in developing and
+          maintaining a website that tracks player race history, allowing users to view their past performances and
+          progress within the game. This helps players stay connected to their achievements and fosters community
+          engagement.
+        </p>
+        <br />
+        <h1 className="text-xl font-bold">Technology Stack</h1>
+        <p className=""> • Node js - for the backend</p>
+        <p> • Github - for version control</p>
+        <p> • React js - for the frontend</p>
       </>
     ),
   },
@@ -325,14 +332,15 @@ export const testimonial: TestimonialSection = {
     {
       name: 'Currently Seeking for Full Time Job',
       text: '',
-      image: 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjl5dWg0cGQ2NzZ5MTdoYzF4ZTF0cXMxanBveDI0NWV2ODQ3N29xeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AUz0mzKFXZN4FJxWdn/giphy.webp',
+      image:
+        'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjl5dWg0cGQ2NzZ5MTdoYzF4ZTF0cXMxanBveDI0NWV2ODQ3N29xeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AUz0mzKFXZN4FJxWdn/giphy.webp',
     },
     {
       name: "I'll make things happen.",
       text: "Let's talk about your next project!",
-      image: 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdqcW9iZWpwZmwzZTI5eGFnMnUxZTVkbmNjejJpZG1vMmNnOWU1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xFYs2LARiXps9uZFhq/giphy.webp',
+      image:
+        'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdqcW9iZWpwZmwzZTI5eGFnMnUxZTVkbmNjejJpZG1vMmNnOWU1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xFYs2LARiXps9uZFhq/giphy.webp',
     },
-   
   ],
 };
 

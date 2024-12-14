@@ -27,19 +27,19 @@
      
     ] // <-- Added this line
   },
-  // "include": [
-  //   "./src/**/*",
-  //   "next-env.d.ts",
-  //   "**/*.ts",
-  //   "**/*.tsx",
-  //   "globals.d.ts"
-  // ],
   "include": [
-    "src/**/*",
-    "global.d.ts"
-  ]
+    "./src/**/*",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "globals.d.ts"
+  ],
+  // "include": [
+  //   "src/**/*",
+  //   "global.d.ts"
+  // ]
   // "exclude": ["node_modules"]
-  ,
+  
   "exclude": [
     "node_modules"
   ]

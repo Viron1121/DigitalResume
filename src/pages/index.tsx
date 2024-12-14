@@ -18,7 +18,7 @@ const Header = dynamic(() => import('../components/Sections/Header'), {ssr: fals
 const Home: FC = memo(() => {
   const {title, description} = homePageMeta;
   return (
-    <Page description={description} title={title}>  
+    <Page description={description} title={title}>
       <Header />
       <Hero />
       <About />
