@@ -46,13 +46,18 @@ const Facemesh: React.FC = () => {
   const startVideo = () => {
     if (videoRef.current) {
       navigator.mediaDevices
-        .getUserMedia({video: {}})
+        .getUserMedia({
+          video: {facingMode: 'user'} // 'user' for front camera, 'environment' for rear camera
+        })
         .then((stream) => {
           if (videoRef.current) {
             videoRef.current.srcObject = stream;
           }
         })
-        .catch((err) => console.error('Error accessing video stream:', err));
+        .catch((err) => {
+          console.error('Error accessing video stream:', err);
+          alert('Unable to access camera. Please check permissions or try a different browser.');
+        });
     }
   };
 
@@ -84,7 +89,6 @@ const Facemesh: React.FC = () => {
         if (ctx) {
           ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
         }
-
         window.faceapi.draw.drawDetections(canvasElement, resizedDetections);
         window.faceapi.draw.drawFaceLandmarks(canvasElement, resizedDetections);
         window.faceapi.draw.drawFaceExpressions(canvasElement, resizedDetections);
@@ -97,11 +101,14 @@ const Facemesh: React.FC = () => {
     width: '100%',
     maxWidth: '640px', // Limit max width for larger screens
     margin: '0 auto',
+     transform: 'scaleX(-1)',
   };
 
   const videoStyle: React.CSSProperties = {
     width: '100%', // Responsive width
     height: 'auto', // Maintain aspect ratio
+    transform: 'scaleX(-1)', // Flip horizontally
+    transformOrigin: 'center',
   };
 
   const canvasStyle: React.CSSProperties = {
@@ -110,6 +117,8 @@ const Facemesh: React.FC = () => {
     left: 0,
     width: '100%',
     height: '100%',
+    transform: 'scaleX(-1)', // Flip horizontally
+    transformOrigin: 'center',
   };
 
   return (
@@ -117,6 +126,7 @@ const Facemesh: React.FC = () => {
       <div style={{textAlign: 'center'}}>
         <span>{initializing ? 'Initializing...' : 'Ready'}</span>
         <div style={videoContainerStyle}>
+          
           <video
             autoPlay
             muted
