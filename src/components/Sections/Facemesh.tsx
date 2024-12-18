@@ -101,7 +101,7 @@ const Facemesh: React.FC = () => {
     width: '100%',
     maxWidth: '640px', // Limit max width for larger screens
     margin: '0 auto',
-     transform: 'scaleX(-1)',
+    transform: 'scaleX(-1)',
   };
 
   const videoStyle: React.CSSProperties = {
@@ -126,11 +126,12 @@ const Facemesh: React.FC = () => {
       <div style={{textAlign: 'center'}}>
         <span>{initializing ? 'Initializing...' : 'Ready'}</span>
         <div style={videoContainerStyle}>
-          
           <video
             autoPlay
+            loop 
             muted
             onPlay={handleVideoOnPlay}
+            playsInline
             ref={videoRef}
             style={videoStyle}
           />
