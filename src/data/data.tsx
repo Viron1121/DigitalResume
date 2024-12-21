@@ -161,16 +161,24 @@ export const skills: SkillGroup[] = [
     name: 'Frontend development',
     skills: [
       {
-        name: 'React',
+        name: 'React js, ts',
         level: 9,
       },
       {
-        name: 'Typescript',
+        name: 'blade',
+        level: 8,
+      },
+      {
+        name: 'Vue.js',
         level: 7,
       },
       {
-        name: 'blade',
+        name: 'Flask',
         level: 7,
+      },
+      {
+        name: 'BootStrap',
+        level: 8,
       },
     ],
   },
@@ -178,11 +186,19 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
-        name: 'Node.js',
-        level: 6,
+        name: 'Express',
+        level: 8,
       },
       {
         name: 'Laravel',
+        level: 8,
+      },
+      {
+        name: 'Ruby on rails',
+        level: 8,
+      },
+      {
+        name: 'Python',
         level: 8,
       },
     ],
@@ -194,10 +210,23 @@ export const skills: SkillGroup[] = [
         name: 'MySQL',
         level: 8,
       },
+      {
+        name: 'MongoDB',
+        level: 8,
+      },
     ],
   },
   {
     name: 'WordPress Development',
+    skills: [
+      {
+        name: '',
+        level: 9,
+      },
+    ],
+  },
+  {
+    name: 'Git Version Control',
     skills: [
       {
         name: '',

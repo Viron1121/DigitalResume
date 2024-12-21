@@ -124,7 +124,8 @@ const Facemesh: React.FC = () => {
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Facemesh}>
       <div style={{textAlign: 'center'}}>
-        <span>{initializing ? 'Initializing...' : 'Ready'}</span>
+        <h2 className="self-center text-xl font-bold text-white m-5"> Face API Tensorflow demo</h2>
+        <span className="self-center text-xl font-bold text-white">{initializing ? 'Initializing...' : ''}</span>
         <div style={videoContainerStyle}>
           <video
             autoPlay
