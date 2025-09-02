@@ -82,8 +82,10 @@ export const heroData: Hero = {
           }}>
           Full Stack Web Developer <span style={{textShadow: 'none'}}>and</span> Systems Engineer
         </strong>
-        , currently working at <strong className="text-stone-100">National Center for Mental Health</strong> creating
-        web applications from scratch using{' '}
+        , currently working at  <strong className="text-stone-100">RareJob Philippines Inc.</strong> as part of the Development Team. 
+        I specialize in creating and maintaining web applications, ensuring system stability, and collaborating
+         with cross-functional teams to deliver efficient, secure, and business-critical solutions. Previously, 
+         I worked at the National Center for Mental Health, where I built web applications from scratch using {' '}
         <strong className="inline-flex items-center space-x-1">
           <span>React TypeScript</span>
           <img
@@ -99,11 +101,7 @@ export const heroData: Hero = {
             }}
           />
         </strong>
-        as the frontend and Laravel as the backend.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time, I enjoy coding personal projects, including building recognition models with TensorFlow. I am
-        passionate about learning the latest technologies and continuously improving my skills as a web developer.
+          for the frontend and Laravel for the backend.
       </p>
     </>
   ),
