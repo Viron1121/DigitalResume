@@ -48,14 +48,14 @@ const Facemesh: React.FC = () => {
     if (videoRef.current) {
       navigator.mediaDevices
         .getUserMedia({
-          video: {facingMode: 'user'} // 'user' for front camera, 'environment' for rear camera
+          video: {facingMode: 'user'}, // 'user' for front camera, 'environment' for rear camera
         })
-        .then((stream) => {
+        .then(stream => {
           if (videoRef.current) {
             videoRef.current.srcObject = stream;
           }
         })
-        .catch((err) => {
+        .catch(err => {
           console.error('Error accessing video stream:', err);
           alert('Unable to access camera. Please check permissions or try a different browser.');
         });
@@ -83,74 +83,65 @@ const Facemesh: React.FC = () => {
           .detectAllFaces(videoElement, new window.faceapi.TinyFaceDetectorOptions())
           .withFaceLandmarks()
           .withFaceExpressions();
-        
+
         if (detections.length > 0) {
-  const expressions = detections[0].expressions;
-  const maxExpression = Object.keys(expressions).reduce((a, b) =>
-    expressions[a] > expressions[b] ? a : b
-  );
+          const expressions = detections[0].expressions;
+          const maxExpression = Object.keys(expressions).reduce((a, b) => (expressions[a] > expressions[b] ? a : b));
 
-  if (maxExpression === 'happy' && expressions.happy > 0.7) {
-    setExpressionMessage(
-      <div className="mt-6 p-4 bg-green-700 text-white rounded-2xl shadow-lg animate-bounce max-w-md mx-auto">
-        <p className="text-lg font-semibold mb-2">
-          Looks like you’re enjoying this demo 😄
-        </p>
-        <p className="mb-3">
-          Want to know why I’d be a great fit for your team?
-        </p>
-        <a
-          href="/Viron-Navarro-CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 bg-white text-green-700 font-bold rounded-lg shadow hover:bg-gray-100 transition"
-        >
-          View My CV
-        </a>
-      </div>
-    );
-  }
+          if (maxExpression === 'happy' && expressions.happy > 0.7) {
+            setExpressionMessage(
+              <div className="mt-6 p-4 bg-green-700 text-white rounded-2xl shadow-lg animate-bounce max-w-md mx-auto">
+                <p className="text-lg font-semibold mb-2">Looks like you’re enjoying this demo 😄</p>
+                <p className="mb-3">Want to know why I’d be a great fit for your team?</p>
+                <a
+                  className="px-4 py-2 bg-white text-green-700 font-bold rounded-lg shadow hover:bg-gray-100 transition"
+                  href="/Viron-Navarro-CV.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank">
+                  View My CV
+                </a>
+              </div>,
+            );
+          }
 
-  if (maxExpression === 'surprised' && expressions.surprised > 0.7) {
-    setExpressionMessage(
-      <div className="mt-6 p-4 bg-blue-700 text-white rounded-2xl shadow-lg animate-pulse max-w-md mx-auto">
-        <p className="text-lg font-semibold mb-2">Wow, surprised? 😲</p>
-        <p className="mb-3">Let me show you something even cooler!</p>
-        <div className="p-4 bg-white text-blue-700 rounded-xl shadow mt-3">
-          <h3 className="font-bold">Featured Project 🚀</h3>
-          <p>Check out my latest work that I’m most proud of.</p>
-          <a
-            href="https://yourprojectlink.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition"
-          >
-            View Project
-          </a>
-        </div>
-      </div>
-    );
-  }
+          if (maxExpression === 'surprised' && expressions.surprised > 0.7) {
+            setExpressionMessage(
+              <div className="mt-6 p-4 bg-blue-700 text-white rounded-2xl shadow-lg animate-pulse max-w-md mx-auto">
+                <p className="text-lg font-semibold mb-2">Wow, surprised? 😲</p>
+                <p className="mb-3">Let me show you something even cooler!</p>
+                <div className="p-4 bg-white text-blue-700 rounded-xl shadow mt-3">
+                  <h3 className="font-bold">Featured Project 🚀</h3>
+                  <p>Check out my latest work that I’m most proud of.</p>
+                  <a
+                    className="block mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition"
+                    href="https://yourprojectlink.com"
+                    rel="noopener noreferrer"
+                    target="_blank">
+                    View Project
+                  </a>
+                </div>
+              </div>,
+            );
+          }
 
-  if (maxExpression === 'neutral' && expressions.neutral > 0.7) {
-    setExpressionMessage(
-      <div className="mt-6 p-4 bg-gray-700 text-white rounded-2xl shadow-lg max-w-md mx-auto">
-        <p className="text-lg">Thanks for checking out my portfolio. 🙏</p>
-      </div>
-    );
-  }
+          if (maxExpression === 'neutral' && expressions.neutral > 0.7) {
+            setExpressionMessage(
+              <div className="mt-6 p-4 bg-gray-700 text-white rounded-2xl shadow-lg max-w-md mx-auto">
+                <p className="text-lg">Thanks for checking out my portfolio. 🙏</p>
+              </div>,
+            );
+          }
 
-  if (maxExpression === 'angry' && expressions.angry > 0.6) {
-    setExpressionMessage(
-      <div className="mt-6 p-4 bg-red-700 text-white rounded-2xl shadow-lg animate-pulse max-w-md mx-auto">
-        <p className="text-lg mb-2">I hope you feel better soon 💙</p>
-        <p>Here’s something uplifting to brighten your day:</p>
-        <p className="mt-2 italic">“Keep going, the best is yet to come.” 🌟</p>
-      </div>
-    );
-  }
-}
-
+          if (maxExpression === 'angry' && expressions.angry > 0.6) {
+            setExpressionMessage(
+              <div className="mt-6 p-4 bg-red-700 text-white rounded-2xl shadow-lg animate-pulse max-w-md mx-auto">
+                <p className="text-lg mb-2">I hope you feel better soon 💙</p>
+                <p>Here’s something uplifting to brighten your day:</p>
+                <p className="mt-2 italic">“Keep going, the best is yet to come.” 🌟</p>
+              </div>,
+            );
+          }
+        }
 
         const resizedDetections = window.faceapi.resizeResults(detections, displaySize);
 
@@ -190,42 +181,28 @@ const Facemesh: React.FC = () => {
     transformOrigin: 'center',
   };
 
-return (
-  <Section className="bg-neutral-800" sectionId={SectionId.Facemesh}>
-    <div style={{textAlign: 'center'}}>
-      <h2 className="self-center text-xl font-bold text-white m-5">
-        Face API Tensorflow demo
-      </h2>
-      <span className="self-center text-xl font-bold text-white">
-        {initializing ? 'Initializing...' : ''}
-      </span>
+  return (
+    <Section className="bg-neutral-800" sectionId={SectionId.Facemesh}>
+      <div style={{textAlign: 'center'}}>
+        <h2 className="self-center text-xl font-bold text-white m-5">Face API Tensorflow demo</h2>
+        <span className="self-center text-xl font-bold text-white">{initializing ? 'Initializing...' : ''}</span>
 
-      <div style={videoContainerStyle}>
-        <video
-          autoPlay
-          loop
-          muted
-          onPlay={handleVideoOnPlay}
-          playsInline
-          ref={videoRef}
-          style={videoStyle}
-        />
-        <canvas ref={canvasRef} style={canvasStyle} />
+        <div style={videoContainerStyle}>
+          <video autoPlay loop muted onPlay={handleVideoOnPlay} playsInline ref={videoRef} style={videoStyle} />
+          <canvas ref={canvasRef} style={canvasStyle} />
+        </div>
+
+        {/* Interactive Hiring Message */}
+        {expressionMessage}
       </div>
-
-      {/* Interactive Hiring Message */}
-     {expressionMessage}
-
-    </div>
-  </Section>
-);
-
+    </Section>
+  );
 };
 
 // Declare the faceapi global object
 declare global {
   interface Window {
-    faceapi: any; 
+    faceapi: any;
   }
 }
 
