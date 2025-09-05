@@ -192,7 +192,7 @@ const Facemesh: React.FC = () => {
 
 return (
   <Section className="bg-neutral-800" sectionId={SectionId.Facemesh}>
-    <div style={{ textAlign: 'center' }}>
+    <div style={{textAlign: 'center'}}>
       <h2 className="self-center text-xl font-bold text-white m-5">
         Face API Tensorflow demo
       </h2>
