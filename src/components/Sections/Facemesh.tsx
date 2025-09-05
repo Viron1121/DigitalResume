@@ -114,7 +114,7 @@ const Facemesh: React.FC = () => {
                   <p>Check out my latest work that I’m most proud of.</p>
                   <a
                     className="block mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition"
-                    href="https://yourprojectlink.com"
+                    href="https://github.com/Viron1121?tab=repositories"
                     rel="noopener noreferrer"
                     target="_blank">
                     View Project
